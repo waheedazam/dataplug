@@ -3116,7 +3116,8 @@ class Form extends CI_Controller {
             }
             $data['app_filters_array'] = $app_filters_array;
             $data['selected_filters'] = array();
-            $total_result = $this->form_results_model->return_total_record($form_single_to_query);
+            $total_result = $this->form_results_model
+			->return_total_record($form_single_to_query);
             $totalPages = ceil($total_result / $this->perMap);
             $data['totalPages'] = $totalPages;
             $town_array[] = asort($town_array);
